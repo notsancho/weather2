@@ -1,38 +1,91 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.wrapper-weather{
   text-align: center;
+  padding: 10px;
+}
+.day-prv{
+  display: inline-block;
+	line-height: 1;
+	text-align: center;
+	font-weight: 13px;
+  width: 100px;
+  padding: 8px;
+  color: #bababa !important;
+  cursor: pointer;
+  text-decoration: none;
+}
+.day-prv.active, .day-prv:hover{
+  background-color: #fcfcfc;
+  outline: 1px solid #e9e9e9;
+}
+.day-prv .wrap-img{
+  text-align: center;
+  margin: 1px 4px 0;
+}
+.day-prv .wrap-img img{
+  max-width: 100%;
+  max-height: 100%;
+}
+.day-prv .day-name{
+  line-height: 15px;
+}
+.day-prv .temperature, .day-info .temperature{
+  font-weight: normal;
+  line-height: 15px;
+  font-size: 13px;
+}
+.day-prv .temperature > span, .day-info .temperature > span{
+  display: inline-block;
+  padding-right: 5px;
+}
+.day-prv .temperature .max, .day-info .temperature .max{
+  color: #878787 !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.day-info{
+  display: inline-block;
+	line-height: 1;
+	text-align: center;
+	font-weight: 13px;
+  width: 100px;
+  padding: 8px;
+  color: #bababa !important;
+  cursor: default;
+  text-decoration: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-back{
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  text-decoration: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-back:hover{
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
 }
-
-.App-link {
-  color: #61dafb;
+.btn-back:focus{
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+hr{
+  margin: 30px 0;
 }
